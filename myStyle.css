@@ -4,6 +4,11 @@
 	padding: 0;
 }
 
+p {
+	size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
 .wrapper {
 	width: 100%;
 }
@@ -12,8 +17,9 @@
 	width:100%;
 }
 
-.bestsellers {
+h2 {
 	color: #C16148;
+	font-size: 36px;
 	margin: 46px 154px 0px 60px;
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -21,3 +27,80 @@
 .line-below-headline {
 	margin-left: 60px;
 }
+
+.first-bestseller{
+	margin-left: 60px;
+	margin-top: 41px;
+}
+
+.second-bestseller{
+	margin-left: 60px;
+	margin-top: 29px;
+}
+
+.third-bestseller{
+	margin-left: 60px;
+	margin-top: 29px;
+}
+
+.product-description{
+	color: #C16148;
+	margin-left: 60px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.prize {
+	color: #707070;
+	margin-left: 60px;
+}
+
+.girl-with-sunglasses {
+	margin: 117px 60px 0px 60px;
+}
+
+#summer-collection {
+	color: #302C2C;
+	margin: 20px 60px 20px 60px;
+}
+
+.collection-text {
+	margin: 9px 60px 0px 60px;
+}
+
+.find-it-here{
+	background-color: #FFFFFF;
+	border: solid;
+	border-width: 2px;
+	border-color: #302C2C;
+	color: #302C2C;
+	text-align: center;
+	padding: 5px 15px 5px 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+	float: right;
+	margin-right: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

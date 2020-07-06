@@ -11,16 +11,42 @@ p {
 
 .wrapper {
 	width: 100%;
+	margin-bottom: 300px;
 }
 
+/* how to stack the certain elements: http://www.corelangs.com/css/box/ontop.html#:~:text=The%20following%20HTML%2DCSS%20code,left%20of%20the%20first%20image. */
 .img-top {
 	width:100%;
+	z-index: 1;
+	top: 0px;
+	position: absolute;
+
+}
+
+.logo {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	left: 10px;
+	object-fit: cover;
+  	width:67.06px;
+  	height:63px;
+}
+
+.slogan {
+	position: absolute;
+	z-index: 2;
+	top: 150px;
+	left: 10px;
+	object-fit: cover;
+  	width:138px;
+  	height:84px;
 }
 
 h2 {
 	color: #C16148;
 	font-size: 36px;
-	margin: 46px 154px 0px 60px;
+	margin: 46px 0px 0px 60px;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -30,7 +56,7 @@ h2 {
 
 .first-bestseller{
 	margin-left: 60px;
-	margin-top: 41px;
+	margin-top: 40px;
 }
 
 .second-bestseller{
@@ -48,6 +74,9 @@ h2 {
 	margin-left: 60px;
 	margin-top: 20px;
 	margin-bottom: 5px;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+
 }
 
 .prize {
@@ -68,7 +97,7 @@ h2 {
 	margin: 9px 60px 0px 60px;
 }
 
-.find-it-here{
+.find-it-here {
 	background-color: #FFFFFF;
 	border: solid;
 	border-width: 2px;
@@ -81,11 +110,36 @@ h2 {
 	margin-right: 60px;
 }
 
+.instagram-headline {
+	margin-top: 90px;
+}
+
+/* object-fit: cover; was found here:; https://stackoverflow.com/questions/15167545/how-to-crop-a-rectangular-image-into-a-square-with-css */
+.fit-image {
+  object-fit: cover;
+  width:255px;
+  height:255px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 
 
+footer {
+	background-color: #302C2C;
+	opacity: 0.8;
+	height: 454px;
+	width: auto;
+	margin-top: 90px;
+	text-align: center;
+}
 
-
-
+.footer-link {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+}
 
 
 

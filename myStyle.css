@@ -1,4 +1,5 @@
 /* myStyle.css*/
+/* resetting the browser to not get weird spacing: */
 * {
 	margin: 0;
 	padding: 0;
@@ -11,8 +12,40 @@ p {
 
 .wrapper {
 	width: 100%;
-	margin-bottom: 300px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 0.3fr 0.5fr;
+	grid-template-areas: 
+	"bestseller"
+	"summer-c-section"
+	"instagram-section"
+	"footer";
+
 }
+
+#bestseller {
+	grid-area: bestseller;
+	margin-top: 260px;
+}
+
+#summer-c-section {
+	grid-area: summer-c-section;
+}
+
+#instagram-section {
+	grid-area: instagram-section;
+}
+
+#footer {
+	grid-area: footer;
+	background-color: #302C2C;
+	opacity: 0.8;
+	height: 454px;
+	width: auto;
+	margin-top: 90px;
+	text-align: center;
+}
+
 
 /* how to stack the certain elements: http://www.corelangs.com/css/box/ontop.html#:~:text=The%20following%20HTML%2DCSS%20code,left%20of%20the%20first%20image. */
 .img-top {
@@ -32,6 +65,13 @@ p {
   	width:67.06px;
   	height:63px;
 }
+ .logo-footer{
+ 	text-align: center;
+	margin-top: 33px;
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+ }
 
 .slogan {
 	position: absolute;
@@ -125,28 +165,89 @@ h2 {
 }
 
 
-footer {
-	background-color: #302C2C;
-	opacity: 0.8;
-	height: 454px;
-	width: auto;
-	margin-top: 90px;
-	text-align: center;
-}
-
 .footer-link {
 	text-align: center;
 	color: #FFFFFF;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-decoration: none;
+	margin-top: 33px;
+	display: block; 
 }
 
+@media screen and (min-width: 736px){
+	.wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	"bestseller bestseller bestseller"
+	"summer-c-section summer-c-section summer-c-section "
+	"instagram-section instagram-section instagram-section "
+	"footer footer footer";
 
+	.top-section {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"bestseller bestseller bestseller"
+		"summer-c-section summer-c-section summer-c-section "
+		"instagram-section instagram-section instagram-section "
+		"footer footer footer";
+	}
 
+	#bestseller {
+	grid-area: bestseller;
+	margin-top: 260px;
+	}
 
+	#summer-c-section {
+	grid-area: summer-c-section;
+	}
 
+	#instagram-section {
+	grid-area: instagram-section;
+	}
 
+	.img-top {
+	width:100%;
+	z-index: 1;
+	top: 0px;
+	position: absolute;
 
+}
+
+.logo {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	left: 10px;
+	object-fit: cover;
+  	width:103px;
+  	height:93px;
+}
+ .logo-footer{
+ 	text-align: center;
+	margin-top: 33px;
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+ }
+
+.slogan {
+	position: absolute;
+	z-index: 2;
+	top: 150px;
+	left: 10px;
+	object-fit: cover;
+  	width:265px;
+  	height:156px;
+
+	
+}
+
+erster breakpoint 550px
 
 
 

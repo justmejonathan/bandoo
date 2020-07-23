@@ -14,13 +14,34 @@ p {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 0.3fr 0.5fr;
+	grid-template-rows: 1fr 1fr 1fr 0.3fr 0.5fr;
 	grid-template-areas: 
+	"hero-section"
 	"bestseller"
 	"summer-c-section"
 	"instagram-section"
 	"footer";
+}
 
+#hero-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	/*background-image: img-top;*/
+	background-size: auto;
+	grid-template-areas: 
+	"hero-logo"
+	"hero-slogan";
+}
+
+#hero-logo{
+	grid-area: hero-logo;
+	background-color: blue;
+}
+
+#hero-slogan{
+	grid-area: hero-slogan;
+	background-color: green;
 }
 
 #bestseller {
@@ -53,7 +74,6 @@ p {
 	z-index: 1;
 	top: 0px;
 	position: absolute;
-
 }
 
 .logo {
@@ -63,14 +83,14 @@ p {
 	left: 10px;
 	object-fit: cover;
   	width:67.06px;
-  	height:63px;
+  	height:auto;
 }
  .logo-footer{
  	text-align: center;
 	margin-top: 33px;
 	object-fit: cover;
 	width:67.06px;
-  	height:63px;
+  	height:auto;
  }
 
 .slogan {
@@ -80,7 +100,7 @@ p {
 	left: 10px;
 	object-fit: cover;
   	width:138px;
-  	height:84px;
+  	height:auto;
 }
 
 h2 {
@@ -179,22 +199,13 @@ h2 {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: 
+	"hero-section hero-section hero-section"
 	"bestseller bestseller bestseller"
 	"summer-c-section summer-c-section summer-c-section "
 	"instagram-section instagram-section instagram-section "
 	"footer footer footer";
-
-	.top-section {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
-		grid-template-areas: 
-		"bestseller bestseller bestseller"
-		"summer-c-section summer-c-section summer-c-section "
-		"instagram-section instagram-section instagram-section "
-		"footer footer footer";
 	}
 
 	#bestseller {
@@ -210,40 +221,59 @@ h2 {
 	grid-area: instagram-section;
 	}
 
+	.hero-section {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 
+		background: url(img/logo.png);
+		"hero-logo . . "
+		"hero-slogan hero-slogan . ";
+	}
+
+	#hero-logo{
+		grid-area: hero-logo;
+		background-color: blue;
+	}
+
+	#hero-slogan{
+		grid-area: hero-slogan;
+		background-color: green;
+	}
+
 	.img-top {
 	width:100%;
 	z-index: 1;
 	top: 0px;
 	position: absolute;
+	max-height: 100%;
+	object-fit: cover;
 
-}
+	}
 
-.logo {
+	.logo {
 	position: absolute;
 	z-index: 2;
-	top: 10px;
-	left: 10px;
 	object-fit: cover;
-  	width:103px;
-  	height:93px;
-}
- .logo-footer{
+  	width:99px;
+  	height:auto;
+	}
+
+	.slogan {
+	position: absolute;
+	z-index: 2;
+	object-fit: cover;
+  	width:265px;
+  	height:auto;
+ 	}
+
+ 	.logo-footer{
  	text-align: center;
 	margin-top: 33px;
 	object-fit: cover;
 	width:67.06px;
   	height:63px;
- }
-
-.slogan {
-	position: absolute;
-	z-index: 2;
-	top: 150px;
-	left: 10px;
-	object-fit: cover;
-  	width:265px;
-  	height:156px;
-
+ 	}
 	
 }
 

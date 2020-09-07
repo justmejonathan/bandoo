@@ -1,0 +1,477 @@
+/* stylesheet_responsive.css*/
+/* resetting the browser to not get weird spacing: */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+	color: #C16148;
+	font-size: 36px;
+	margin: 0px 0px 0px 0px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.product-description{
+	color: #C16148;
+	text-decoration: none;
+	size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+	vertical-align: top;
+
+}
+/* Small Devices */
+  #outer-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+#outer-grid > div {
+  /*background-color: green;*/
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+#outer-grid > #inner-grid-header {
+  background-image: url(img/bannerpic.jpg);
+  background-size: cover;
+  height: 250px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+
+/*HEADER SECTION*/
+#inner-grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 40px 100px;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+#slogan-div {
+	grid-area: 3/1/4/3;
+	bottom: 1000px;
+}
+
+.logo {
+	object-fit: cover;
+  	width:67.06px;
+  	height:auto;
+}
+
+.slogan {
+	object-fit: cover;
+  	width: 138px;
+  	height: auto;
+}
+
+/*MENU*/
+nav {
+	/*background-color: lightgreen;*/
+	text-align: right;
+}
+ul {
+
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+	float: right;
+}
+ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 10px;
+}
+
+/*BESTSELLERS SECTION*/
+#inner-grid-bestsellers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 5px;
+}
+#inner-grid-bestsellers > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+.section-headline {
+	width: 255px;
+	margin: auto;
+}
+
+.bestseller{
+	text-align: center;
+}
+
+
+/*NEW COLLECTION SECTION*/
+#inner-grid-new-collection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+#inner-grid-new-collection > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+#inner-grid-new-collection > #summer-collection-section-image {
+  background-image: url(img/girl-with-sunglasses.png);
+  background-size: cover;
+  width: 255px;
+  height: 143px;
+  color: white;
+  padding: 8px;
+  margin: auto;
+}
+#summer-collection-section-text{
+	width: 255px;
+	margin: auto;
+	text-align: left;
+}
+#summer-collection-section-text p{
+	color: #302C2C;
+}
+.find-it-here {
+	background-color: #FFFFFF;
+	border: solid;
+	border-width: 2px;
+	border-color: #302C2C;
+	color: #302C2C;
+	text-align: center;
+	padding: 5px 15px 5px 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+	float: right;
+	margin-top: 20px;
+}
+#summer-collection {
+	color: #302C2C;
+	margin-bottom: 20px;
+}
+/*INSTAGRAM SECTION*/
+#inner-grid-instagram {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 5px;
+}
+#inner-grid-instagram > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+/* object-fit: cover; was found here:; https://stackoverflow.com/questions/15167545/how-to-crop-a-rectangular-image-into-a-square-with-css */
+.instagram-image{
+	text-align: center;
+}
+
+.fit-image {
+  object-fit: cover;
+  width:255px;
+  height:255px;
+}
+
+/*FOOTER*/
+#inner-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-gap: 1px;
+  background: #302C2C;
+  opacity: 80%;
+}
+#inner-grid-footer > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+  text-align: center;
+}
+
+.logo-footer{
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+ }
+
+ .footer-link {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+	display: block; 
+}
+
+/* Medium Devices */
+@media (min-width: 768px) {
+#outer-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+#outer-grid > div {
+  /*background-color: limegreen;*/
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+/*HEADER SECTION MEDIUM DEVICES*/
+#outer-grid > #inner-grid-header {
+  background-image: url(img/bannerpic.jpg);
+  background-size: cover;
+  height: 500px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+
+#inner-grid-header {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+.logo {
+	object-fit: cover;
+  	width:99px;
+  	height:auto;
+}
+#slogan-div {
+	grid-area: 3/1/4/2;
+}
+.slogan {
+	object-fit: cover;
+  	width:265px;
+  	height:auto;
+}
+
+/*MENU MEDIUM DEVICES*/
+nav {
+	/*background-color: lightgreen;*/
+	text-align: right;
+}
+ul {
+
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+	float: right;
+}
+ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 10px;
+}
+/*BESTSELLERS SECTION MEDIUM DEVICES*/
+#inner-grid-bestsellers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px 50px;
+  text-align: left;
+}
+#inner-grid-bestsellers > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+.section-headline {
+	grid-area: 1/1/2/4;
+	width: 500px;
+	margin: 0;
+}
+.product-description{
+	color: #C16148;
+	font-size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+}
+.prize{
+	font-size: 14px;
+	color: #707070;
+}
+.bestseller{
+	text-align: left;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+/*NEW COLLECTION SECTION MEDIUM DEVICES*/
+#inner-grid-new-collection {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr; 
+  grid-gap: 5px;
+}
+#inner-grid-new-collection > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+#summer-collection-section-image{
+	text-align: center;
+	grid-area: 1/1/2/2;
+}
+#inner-grid-new-collection > #summer-collection-section-image {
+  background-image: url(img/girl-with-sunglasses.png);
+  background-size: cover;
+  width: 380px;
+  height: 214.21px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+  margin-left: 8px;
+}
+
+#summer-collection-section-text{
+	width: 255px;
+	margin: auto;
+	grid-area: 1/2/2/3;
+}
+#summer-collection-section-text p{
+	color: #302C2C;
+	font-size: 14px;
+}
+.find-it-here {
+	background-color: #FFFFFF;
+	border: solid;
+	border-width: 2px;
+	border-color: #302C2C;
+	color: #302C2C;
+	text-align: center;
+	padding: 5px 15px 5px 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+	float: right;
+	margin-top: 20px;
+}
+#summer-collection {
+	color: #302C2C;
+	margin-bottom: 20px;
+}
+/*INSTAGRAM SECTION MEDIUM DEVICES*/
+#inner-grid-instagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px 50px;
+}
+#inner-grid-instagram > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+.instagram-image{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	text-align: left;
+}
+.fit-image {
+  object-fit: cover;
+  width:177px;
+  height:177px;
+}
+/*FOOTER MEDIUM DEVICES*/
+#inner-grid-footer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 1px;
+}
+#inner-grid-footer > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+  text-align: center;
+}
+
+.logo-footer{
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+  	vertical-align: middle;
+ }
+
+ .footer-link {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+	display: block; 
+	font-size: 14px;
+	line-height: 63px;
+}
+}
+/* Large Devices */
+@media (min-width: 992px){
+/*HEADER SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-header {
+  background-image: url(img/bannerpic.jpg);
+  background-size: cover;
+  height: 700px;
+  color: white;
+  font-size: 4vw;
+  padding: 24px;
+}
+#inner-grid-header {
+  display: grid;
+  grid-template-rows: auto 200px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+#slogan-div {
+	grid-area: 3/1/4/2;
+}
+.slogan {
+	object-fit: cover;
+  	width:265px;
+  	height:auto;
+}
+/*BESTSELLERS SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-bestsellers {
+	padding: 24px;
+}
+.fit-image {
+  object-fit: cover;
+  width:255px;
+  height:255px;
+}
+/*NEW COLLECTION SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-new-collection {
+	padding: 24px;
+}
+#inner-grid-new-collection > #summer-collection-section-image {
+  background-image: url(img/girl-with-sunglasses.png);
+  background-size: cover;
+  width: 667px;
+  height: 376px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+  text-align: center;
+}
+/*INSTAGRAM SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-instagram {
+	padding: 24px;
+}
+/*FOOTER LARGE DEVICES*/
+#outer-grid > #inner-grid-footer {
+	padding: 24px;
+}
+}

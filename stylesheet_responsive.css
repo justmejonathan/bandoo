@@ -26,9 +26,9 @@ h2 {
 
 }
 /* Small Devices */
-  #outer-grid {
+#outer-grid {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: 1fr;
   grid-gap: 40px;
 }
@@ -114,6 +114,26 @@ ul li a{
 
 .bestseller{
 	text-align: center;
+}
+
+/*RECOMMNDATION SECTION*/
+#inner-grid-recommendation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-gap: 5px;
+}
+#inner-grid-bestsellers > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+  color: #302C2C;
+}
+.section-headline {
+  width: 255px;
+  margin: auto;
+}
+.recommendation-paragraph{
+  margin-top: 20px;
 }
 
 
@@ -440,7 +460,7 @@ ul li a{
 }
 .slogan {
 	object-fit: cover;
-  	width:265px;
+  	width:400px;
   	height:auto;
 }
 /*BESTSELLERS SECTION LARGE DEVICES*/

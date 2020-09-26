@@ -1,0 +1,294 @@
+/* stylesheet_index.css*/
+/* resetting the browser to not get weird spacing: */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+	color: #C16148;
+	font-size: 36px;
+	margin: 0px 0px 0px 0px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+h1{
+  font-size: 100%;
+  font-size: 5vw;
+  color: #F9CB57;
+}
+
+/* Small Devices */
+#outer-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+#outer-grid > div {
+  background-color: green;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+#outer-grid > #inner-grid-header {
+  background-image: url(img/banner_contact.jpg);
+  background-size: cover;
+  height: 250px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+
+/*HEADER SECTION*/
+#inner-grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 40px 100px;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  background: lightgreen;
+  padding: 8px;
+}
+#slogan-div {
+	grid-area: 3/1/4/3;
+	bottom: 1000px;
+}
+
+.logo {
+	object-fit: cover;
+  	width:67.06px;
+  	height:auto;
+}
+
+
+/*MENU*/
+nav {
+	/*background-color: lightgreen;*/
+	text-align: right;
+}
+ul {
+
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+	float: right;
+}
+ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 10px;
+}
+
+/*FOOTER*/
+#inner-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-gap: 1px;
+  background: #302C2C;
+  opacity: 80%;
+}
+#inner-grid-footer > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+  text-align: center;
+}
+
+.logo-footer{
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+ }
+
+ .footer-link {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+	display: block; 
+}
+
+/* Medium Devices */
+@media (min-width: 768px) {
+#outer-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+#outer-grid > div {
+  /*background-color: limegreen;*/
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+/*HEADER SECTION MEDIUM DEVICES*/
+#outer-grid > #inner-grid-header {
+  background-image: url(img/banner_contact.jpg);
+  background-size: cover;
+  height: 500px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+
+#inner-grid-header {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+}
+
+
+/*MENU MEDIUM DEVICES*/
+nav {
+	/*background-color: lightgreen;*/
+	text-align: right;
+}
+ul {
+
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+	float: right;
+}
+ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 10px;
+}
+
+/*FOOTER MEDIUM DEVICES*/
+#inner-grid-footer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 1px;
+}
+#inner-grid-footer > div {
+  /*background: lightgreen;*/
+  padding: 8px;
+  text-align: center;
+}
+
+.logo-footer{
+	object-fit: cover;
+	width:67.06px;
+  	height:63px;
+  	vertical-align: middle;
+ }
+
+ .footer-link {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+	display: block; 
+	font-size: 14px;
+	line-height: 63px;
+}
+}
+/* Large Devices */
+@media (min-width: 992px){
+  #outer-grid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+}
+#outer-grid > div {
+  background-color: limegreen;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+/*HEADER SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-header {
+  background-image: url(img/banner_contact.jpg);
+  background-size: cover;
+  height: 700px;
+  color: white;
+  font-size: 4vw;
+  padding: 24px;
+}
+#inner-grid-header {
+  display: grid;
+  grid-template-rows: auto 200px auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;;
+  grid-gap: 5px;
+}
+#inner-grid-header > div {
+  background: lightgreen;
+  padding: 8px;
+}
+/*MENU*/
+  
+}
+
+nav {
+  background-color: lightgreen;
+  text-align: right;
+  grid-area: 1/9/2/13;
+}
+ul {
+
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+ul li a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0 10px;
+}
+
+}
+/*BESTSELLERS SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-bestsellers {
+	padding: 24px;
+}
+
+}
+/*NEW COLLECTION SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-new-collection {
+	padding: 24px;
+}
+#inner-grid-new-collection > #summer-collection-section-image {
+  background-image: url(img/girl-with-sunglasses.png);
+  background-size: cover;
+  width: 667px;
+  height: 376px;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+  text-align: center;
+}
+/*INSTAGRAM SECTION LARGE DEVICES*/
+#outer-grid > #inner-grid-instagram {
+	padding: 24px;
+}
+/*FOOTER LARGE DEVICES*/
+#outer-grid > #inner-grid-footer {
+	padding: 24px;
+}
+}

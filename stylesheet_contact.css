@@ -216,7 +216,7 @@ ul li a{
 }
 /* Large Devices */
 @media (min-width: 992px){
-  #outer-grid {
+#outer-grid {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;

@@ -4,15 +4,21 @@
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-			<link rel="stylesheet" type="text/css" href="stylesheet_index.css" >
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet_index.css') }}"/>
 		</head>
+		<script>
+			submitForms = function(){
+    			document.getElementById("artist").submit();
+    			document.getElementById("color").submit();
+			}
+		</script>
 <!-- HEADER SECTION -->
 		<body>
 			<div id="outer-grid">
 			  	<div id="inner-grid-header">
 			    	<div> 
 			    		<a href="index.html">
-			    			<img class="logo" src="img/logo.png" alt="BanDoo Logo">
+			    			<img class="logo" src="/static/img/logo.png" alt="BanDoo Logo">
 			    		</a>
 			    	</div>
 <!-- MENU -->
@@ -20,21 +26,21 @@
 			    		<ul>
 			    			<li> <a href="#">Story</a></li>
 			    			<li> <a href="#">Shop</a></li>
-			    			<li> <a href="kontakt.html">Contact</a></li>
+			    			<li> <a href="/contact">Contact</a></li>
 			    		</ul>
 			    	</nav>
 			    	<div id="slogan-div">
-			    		<img class="slogan" src="img/slogan.png" alt="BanDoo Slogan">
+			    		<img class="slogan" src="/static/img/slogan.png" alt="BanDoo Slogan">
 			    	</div>
 		  		</div>
 <!-- BESTSELLER SECTION -->
 		  		<div id="inner-grid-bestsellers">
 		  			<div class="section-headline">
 		  				<h2> Bestsellers</h2>
-						<img class="line-below-headline" src="img/line-below-headlines.png" alt="Line Below Headline">
+						<img class="line-below-headline" src="/static/img/line-below-headlines.png" alt="Line Below Headline">
 		  			</div>
 		  			<div class="bestseller1"> 
-						<img src="img/first-bestseller.png" alt="picture of glasses bands" class="fit-image">
+						<img src="/static/img/first-bestseller.png" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller1-description">
 						<p class="product-description"> I love my Gold Chain </p>
@@ -42,7 +48,7 @@
 					</div>	  
 						
 		  			<div class="bestseller2"> 
-		  				<img src="img/second-bestseller.png" alt="picture of glasses bands" class="fit-image">
+		  				<img src="/static/img/second-bestseller.png" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller2-description">
 						<p class="product-description"> My Life is Bling Bling </p>
@@ -50,7 +56,7 @@
 					</div>	 
 
 		  			<div class="bestseller3">
-						<img src="img/third-bestseller.png" alt="picture of glasses bands" class="fit-image">
+						<img src="/static/img/third-bestseller.png" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller3-description">
 						<p class="product-description"> I was Born with Style </p>
@@ -61,20 +67,44 @@
 				<div id="inner-grid-recommendation">
 					<div class="section-headline-recommendation">
 		  				<h2> No idea what to chose? </h2>
-						<img class="line-below-headline" src="img/line-below-headlines.png" alt="Line Below Headline">
+						<img class="line-below-headline" src="/static/img/line-below-headlines.png" alt="Line Below Headline">
 						<p class="recommendation-paragraph"> Tell us your preferences and we’ll recommend you your perfect glasses chain.</p>
 		  			</div>
-		  			<div class="dropdown1"> 
-		  				<p class="recommendation-question"> Who is your favorite music artist? </p>
-		  			</div>
+		  			<div class="dropdown1">
+						<form action="/action_page.php" method="GET">
+							<p class="recommendation-question"> Who's your favorite music artist? </p>
+							<select id="artist" name="cars">
+							  <option value="kanye-west">Kanye West</option>
+							  <option value="drake">Drake</option>
+							  <option value="taylor-swift">Taylor Swift</option>
+							  <option value="lady-gaga">Lady Gaga</option>
+							</select>
+						</form>
+					</div>
 		  			<div class="dropdown2"> 
-		  				<p class="recommendation-question"> What’s your favorite colour? </p>
+						<form action="/action_page.php" method="GET">
+							<p class="recommendation-question"> What's your favorite color? </p>
+							<select id="color" name="cars">
+							  <option value="black">Black</option>
+							  <option value="golden">Golden</option>
+							  <option value="silver">Silver</option>
+							  <option value="orange">Orange</option>
+							</select>
+						</form>
 		  			</div>
-		  			<div class="dropdown3">
-		  				<p class="recommendation-question"> What’s your drink in da club? </p>
+		  			<div class="dropdown3">  
+						<form action="/action_page.php" method="GET">
+						<p class="recommendation-question"> What’s your drink in da club? </p>
+						<select id="color" name="cars">
+							<option value="water">Water</option>
+							<option value="gin-tonic">Gin Tonic</option>
+							<option value="wodka">Wodka</option>
+							<option value="rum-cola">Rum-Cola</option>
+						</select>
+						</form>
 		  			</div>
 		  			<div class="recommendation-button-div">
-						<button type="button" class="recommendation-button">get perfect fit</button>
+						<input type="button" class="recommendation-button" value="get perfect fit" onclick="submitForms()" />
 		  			</div>
 		  			<div class="recommendation-result-text">
 		  				<h2> Result Div(only show when button clicked) </h2>
@@ -100,22 +130,22 @@
 			  	<div id="inner-grid-instagram">
 		  			<div class="section-headline-instagram">
 		  				<h2> People wearing BanDoo </h2>
-						<img class="line-below-headline" src="img/line-below-headlines.png" alt="Line Below Headline">
+						<img class="line-below-headline" src="/static/img/line-below-headlines.png" alt="Line Below Headline">
 		  			</div>
 		  			<div class="instagram-image1">
-						<img src="img/tim.png" alt="picture of glasses bands" class="fit-image">
+						<img src="/static/img/tim.png" alt="picture of glasses bands" class="fit-image">
 					</div>  
 					<div class="instagram-image1-description">
 						<a href="https://www.instagram.com/p/B-2N6zhA5tA0_KRSK5CHTfoa-Y7OciOkp4WTOQ0/" class="product-description" >@tim_r_buettner</a>
 		  			</div>
 		  			<div class="instagram-image2">
-						<img src="img/tade.png" alt="picture of glasses bands" class="fit-image">
+						<img src="/static/img/tade.png" alt="picture of glasses bands" class="fit-image">
 					</div>  
 					<div class="instagram-image2-description">
 						<a href="https://www.instagram.com/tade_bo/" class="product-description" >@tade_bo</a>
 		  			</div>
 		  			<div class="instagram-image3">
-						<img src="img/jonathan.png" alt="picture of glasses bands" class="fit-image">
+						<img src="/static/img/jonathan.png" alt="picture of glasses bands" class="fit-image">
 					</div>  
 					<div class="instagram-image3-description">
 						<a href="https://www.instagram.com/p/Bag_YkQnx_b" class="product-description" >@_justmejonathan</a>
@@ -133,7 +163,7 @@
 						<a href="https://www.facebook.com/" class="footer-link" >Facebook</a>
 					</div>
 					<div class="footer-item-logo">
-						<img class="logo-footer" src="img/logo.png" alt="BanDoo Logo">
+						<img class="logo-footer" src="/static/img/logo.png" alt="BanDoo Logo">
 					</div>
 					<div class="footer-item-datenschutz">
 						<a href=# class="footer-link" >Datenschutz</a>

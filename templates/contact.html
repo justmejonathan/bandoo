@@ -4,15 +4,15 @@
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-			<link rel = "stylesheet" type = "text/css" href = "stylesheet_contact.css" >
+			<link rel = "stylesheet" type = "text/css" href="{{ url_for('static', filename='stylesheet_contact.css', v=0.01) }}">
 		</head>
 <!-- HEADER SECTION -->
 		<body>
 			<div id="outer-grid">
 			  	<div id="inner-grid-header">
 			    	<div> 
-			    		<a href="index.html">
-			    			<img class = "logo" src = "img/logo.png" alt = "BanDoo Logo">
+			    		<a href="/">
+			    			<img class = "logo" src = "/static/img/logo.png" alt = "BanDoo Logo">
 			    		</a>	
 			    	</div>
 <!-- MENU -->
@@ -20,7 +20,7 @@
 			    		<ul>
 			    			<li> <a href="#">Story</a></li>
 			    			<li> <a href="#">Shop</a></li>
-			    			<li> <a href="Kontakt.html">Contact</a></li>
+			    			<li> <a href="/">Contact</a></li>
 			    		</ul>
 			    	</nav>
 			    	<div class="title">
@@ -42,7 +42,7 @@
 						<a href="https://www.facebook.com/" class = "footer-link" >Facebook</a>
 					</div>
 					<div class="footer-item">
-						<img class = "logo-footer" src = "img/logo.png" alt = "BanDoo Logo">
+						<img class = "logo-footer" src = "/static/img/logo.png" alt = "BanDoo Logo">
 					</div>
 					<div class="footer-item">
 						<a href=# class = "footer-link" >Datenschutz</a>

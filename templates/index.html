@@ -6,12 +6,6 @@
 			<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet_index.css') }}"/>
 		</head>
-		<script>
-			submitForms = function(){
-    			document.getElementById("artist").submit();
-    			document.getElementById("color").submit();
-			}
-		</script>
 <!-- HEADER SECTION -->
 		<body>
 			<div id="outer-grid">
@@ -71,41 +65,38 @@
 						<p class="recommendation-paragraph"> Tell us your preferences and we’ll recommend you your perfect glasses chain.</p>
 		  			</div>
 		  			<div class="dropdown1">
-						<form action="/action_page.php" method="GET">
+						<form action="/recommendations" method="POST">
 							<p class="recommendation-question"> Who's your favorite music artist? </p>
-							<select id="artist" name="cars">
+							<select id="artist" name="artist">
 							  <option value="kanye-west">Kanye West</option>
 							  <option value="drake">Drake</option>
 							  <option value="taylor-swift">Taylor Swift</option>
 							  <option value="lady-gaga">Lady Gaga</option>
 							</select>
-						</form>
 					</div>
 		  			<div class="dropdown2"> 
-						<form action="/action_page.php" method="GET">
 							<p class="recommendation-question"> What's your favorite color? </p>
-							<select id="color" name="cars">
+							<select id="color" name="color">
 							  <option value="black">Black</option>
 							  <option value="golden">Golden</option>
 							  <option value="silver">Silver</option>
 							  <option value="orange">Orange</option>
 							</select>
-						</form>
 		  			</div>
 		  			<div class="dropdown3">  
-						<form action="/action_page.php" method="GET">
 						<p class="recommendation-question"> What’s your drink in da club? </p>
-						<select id="color" name="cars">
+						<select id="drink" name="drink">
 							<option value="water">Water</option>
 							<option value="gin-tonic">Gin Tonic</option>
 							<option value="wodka">Wodka</option>
 							<option value="rum-cola">Rum-Cola</option>
 						</select>
-						</form>
+						
 		  			</div>
 		  			<div class="recommendation-button-div">
-						<input type="button" class="recommendation-button" value="get perfect fit" onclick="submitForms()" />
-		  			</div>
+						<input type="submit" class="recommendation-button" value="get perfect fit">
+					  </div>
+					</form>
 		  			<div class="recommendation-result-text">
 		  				<h2> Result Div(only show when button clicked) </h2>
 					</div>

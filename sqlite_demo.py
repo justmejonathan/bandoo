@@ -18,8 +18,7 @@ c = conn.cursor()
 #def update_counter (id, counter):
 #    with conn:
 c.execute('UPDATE glasses SET counter = counter +1 WHERE id = 1 ')
-
-c.execute(('SELECT * FROM glasses WHERE id = 1'))
+glasses = c.execute(('SELECT * FROM glasses WHERE id = 1'))
 #only returns one row:
 print(c.fetchall())
 #print(gls)

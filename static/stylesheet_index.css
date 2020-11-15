@@ -87,13 +87,13 @@ nav {
 	/*background-color: lightgreen;*/
 	text-align: right;
 }
-ul {
+/*ul {
 
-}
+}*/
 ul li {
 	list-style: none;
 	display: inline-block;
-	float: right;
+	/*float: right;*/
 }
 ul li a {
 	text-decoration: none;
@@ -199,9 +199,12 @@ ul li a {
 }
 .recommendation-result-text{
   grid-area: 6/1/7/3;
+  display: none;
 }
 .recommendation-image{
   grid-area: 7/1/8/3;
+  display: none;
+
 }
 
 /*NEW COLLECTION SECTION*/
@@ -424,14 +427,11 @@ nav {
 	/*background-color: lightgreen;*/
 	text-align: right;
 }
-ul {
-
-}
 
 ul li{
 	list-style: none;
 	display: inline-block;
-	float: right;
+	/*float: right;*/
 }
 ul li a{
 	text-decoration: none;
@@ -549,9 +549,12 @@ ul li a{
 }
 .recommendation-result-text{
   grid-area: 4/1/5/4;
+  /*background: lightgreen;*/
+  display: none;
 }
 .recommendation-image{
   grid-area: 4/5/5/8;
+  display: none;
 }
 
 /*NEW COLLECTION SECTION MEDIUM DEVICES*/
@@ -789,7 +792,7 @@ ul li a{
 /*RECOMMNDATION SECTION*/
 #outer-grid > #inner-grid-recommendation {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-gap: 5px;
   padding: 24px;
@@ -821,6 +824,7 @@ ul li a{
 }
 .recommendation-button-div{
   grid-area: 5/1/6/5;
+  position: relative;
 }
 .recommendation-button{
   background-color: #FFFFFF;
@@ -833,12 +837,16 @@ ul li a{
 	text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
+  position: absolute;
+  bottom: 0;
 }
 .recommendation-result-text{
   grid-area: 2/5/5/9;
+  display: block;
 }
 .recommendation-image{
   grid-area: 2/9/6/13;
+  display: block;
 }
 /*NEW COLLECTION SECTION LARGE DEVICES*/
 #outer-grid > #inner-grid-new-collection {

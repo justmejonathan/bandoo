@@ -32,15 +32,16 @@
 		  			<div class="section-headline">
 		  				<h2> Bestsellers</h2>
 						<img class="line-below-headline" src="/static/img/line-below-headlines.png" alt="Line Below Headline">
-		  			</div>
+					</div>
+					{% for bestseller in bestsellers%}
 		  			<div class="bestseller1"> 
 						<img src="/static/img/first-bestseller.png" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller1-description">
-						<p class="product-description"> I love my Gold Chain </p>
-						<p class="prize"> 40€ </p>
-					</div>	  
-						
+						<p class="product-description"> {{bestseller}} </p>
+						<p class="prize"> {{bestseller.price}} </p>
+					</div>
+					{% endfor%}	  
 		  			<div class="bestseller2"> 
 		  				<img src="/static/img/second-bestseller.png" alt="picture of glasses bands" class="fit-image">
 					</div>

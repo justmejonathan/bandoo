@@ -5,4 +5,8 @@
     #username = Stringfield('Username')
 
 #submit = SubmitField('get perfect fit')
+conn = sqlite3.connect('glasses.db')
+c = conn.cursor()
 
+
+c.execute(SELECT * FROM glasses)

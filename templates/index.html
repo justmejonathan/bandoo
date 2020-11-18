@@ -33,30 +33,33 @@
 		  				<h2> Bestsellers</h2>
 						<img class="line-below-headline" src="/static/img/line-below-headlines.png" alt="Line Below Headline">
 					</div>
-					{% for bestseller in bestsellers%}
+					{% for bestseller in bestseller1%}
 		  			<div class="bestseller1"> 
-						<img src="/static/img/first-bestseller.png" alt="picture of glasses bands" class="fit-image">
+						<img src="{{bestseller[4]}}" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller1-description">
-						<p class="product-description"> {{bestseller}} </p>
-						<p class="prize"> {{bestseller.price}} </p>
+						<p class="product-description"> {{bestseller[2]}} </p>
+						<p class="prize"> {{bestseller[5]}} </p>
 					</div>
-					{% endfor%}	  
+					{% endfor %}	  
+					{% for bestseller in bestseller2%}
 		  			<div class="bestseller2"> 
-		  				<img src="/static/img/second-bestseller.png" alt="picture of glasses bands" class="fit-image">
+		  				<img src="{{bestseller[4]}}" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller2-description">
-						<p class="product-description"> My Life is Bling Bling </p>
-						<p class="prize"> 49€ </p>
+						<p class="product-description"> {{bestseller[2]}} </p>
+						<p class="prize"> {{bestseller[5]}} </p>
 					</div>	 
-
+					{% endfor %}
+					{% for bestseller in bestseller3%}
 		  			<div class="bestseller3">
-						<img src="/static/img/third-bestseller.png" alt="picture of glasses bands" class="fit-image">
+						<img src="{{bestseller[4]}}" alt="picture of glasses bands" class="fit-image">
 					</div>
 					<div class="bestseller3-description">
-						<p class="product-description"> I was Born with Style </p>
-						<p class=prize> 29€ </p>
+						<p class="product-description"> {{bestseller[2]}} </p>
+						<p class=prize> {{bestseller[5]}} </p>
 					</div>	
+					{% endfor %}
 				</div>
 <!-- RECOMMENDATION SECTION -->
 				<div id="inner-grid-recommendation">

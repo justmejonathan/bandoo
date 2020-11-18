@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/Users/Marvin/Documents/coding_for_code/venv/bin/python3.9"
+    "python.pythonPath": "/usr/local/bin/python3",
+
+    "python.linting.pylintArgs": ["--load-plugins", "pylint-flask", "pylint-flask-sqlalchemy"]
 }

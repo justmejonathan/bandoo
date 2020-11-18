@@ -18,8 +18,8 @@
 <!-- MENU -->
 			    	<nav>
 			    		<ul>
-			    			<li> <a href="#">Story</a></li>
-			    			<li> <a href="#">Shop</a></li>
+			    			<li> <a href="#bestsellers-anchor">Bestsellers</a></li>
+			    			<li> <a href="#recommendation-anchor">Recommender</a></li>
 			    			<li> <a href="/contact">Contact</a></li>
 			    		</ul>
 			    	</nav>
@@ -28,6 +28,7 @@
 			    	</div>
 		  		</div>
 <!-- BESTSELLER SECTION -->
+				<a name="bestsellers-anchor"></a>
 		  		<div id="inner-grid-bestsellers">
 		  			<div class="section-headline">
 		  				<h2> Bestsellers</h2>
@@ -62,6 +63,7 @@
 					{% endfor %}
 				</div>
 <!-- RECOMMENDATION SECTION -->
+				<a name="recommendation-anchor"></a>
 				<div id="inner-grid-recommendation">
 					<div class="section-headline-recommendation">
 		  				<h2> No idea what to chose? </h2>
@@ -71,7 +73,7 @@
 		  			<div class="dropdown1">
 						<form action="/recommendations" method="POST">
 							<p class="recommendation-question"> Who's your favorite music artist? </p>
-							<select id="artist" name="artist">
+							<select class="dropdown-button" id="artist" name="artist">
 							  <option value=1>Kanye West</option>
 							  <option value=2>Drake</option>
 							  <option value=3>Taylor Swift</option>
@@ -98,6 +100,7 @@
 						
 		  			</div>
 		  			<div class="recommendation-button-div">
+						<p class="recommendation-question"> Get your result here: </p>
 						<input type="submit" class="recommendation-button" value="get perfect fit">
 					  </div>
 					</form>

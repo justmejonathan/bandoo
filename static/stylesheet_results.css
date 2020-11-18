@@ -195,7 +195,7 @@ select{
 	text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
-  font-size: 3vw;
+  font-size: 1.5vw;
 }
 .recommendation-button{
   background-color: #FFFFFF;
@@ -212,11 +212,14 @@ select{
 }
 .recommendation-result-text{
   grid-area: 6/1/7/3;
-  display: none;
+  display: block;
 }
 .recommendation-image{
   grid-area: 7/1/8/3;
-  display: none;
+  display: block;
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
 /*NEW COLLECTION SECTION*/
@@ -557,7 +560,7 @@ select{
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .recommendation-button{
   background-color: #FFFFFF;
@@ -575,11 +578,11 @@ select{
 .recommendation-result-text{
   grid-area: 4/1/5/4;
   /*background: lightgreen;*/
-  display: none;
+  display: block;
 }
 .recommendation-image{
   grid-area: 4/5/5/8;
-  display: none;
+  display: block;
 }
 
 /*NEW COLLECTION SECTION MEDIUM DEVICES*/

@@ -15,19 +15,6 @@ class Glassesdb(db.Model):
     image_file = db.Column(db.String(50))
     prize = db.Column(db.String(4))
 
-def __repr__(self):
-    return f"Glassesdb'{self.name}', '{self.image_file}', '{self.prize}'"
-
-def get_all_glasses():
-    conn = sqlite3.connect('site.db')
-    c = conn.cursor()
-    bestsellers = Glassesdb.query.all()
-    c.execute('SELECT * FROM Glassesdb ORDER BY counter desc LIMIT 3')
-    all_glasses = c.fetchall()
-    conn.commit()
-    conn.close()
-    return all_glasses
-
 def first_bestseller():
     conn = sqlite3.connect('site.db')
     c = conn.cursor()
@@ -65,7 +52,6 @@ def index():
     bestseller1 = first_bestseller()
     bestseller2 = second_bestseller()
     bestseller3 = third_bestseller()
-    #bestsellers = get_all_glasses()
     return render_template('index.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
 @app.route('/contact')
 def contact():
@@ -96,9 +82,6 @@ def recommendations():
             conn.close()
     else:
         return render_template('index.html', title='Bandoo')
-
-
-
 
 
 if __name__=="__main__":

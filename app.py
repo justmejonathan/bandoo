@@ -2,9 +2,10 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.config['SECRET KEY'] = '654392748kl3242dfnkl43235hf'
-app.static_folder = 'static'
+app.config['EMAIL_USER'] = 'grocholl.marvin@gmail.com'
+app.config['EMAIL:PASS'] = 'googleinnorway123'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
@@ -63,26 +64,37 @@ def recommendations():
         artist = request.form["artist"]
         color = request.form["color"]
         drink = request.form["drink"]
+        bestseller1 = first_bestseller()
+        bestseller2 = second_bestseller()
+        bestseller3 = third_bestseller()
         gls = int(artist) + int(color) + int(drink)
         conn = sqlite3.connect('site.db') #kann wahrscheinlich rausgenommen werden und nach oben gesetzt werden
         c = conn.cursor()
         if gls <= 5:
             c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 1 ')
-            return "I love my Gold Chain"        
-        elif gls > 5 and gls <=7:
-            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 2 ')
-            return "My Life is Bling Bling"
-        elif gls > 7 and  gls <=9:
-            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 3 ')
-            return "I was Born with Style"
-        else:
-            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 4 ')
-            return render_template('beachvibesbaby.html', title='Bandoo')
             conn.commit()
             conn.close()
+            return render_template('i_love_my_gold_chain.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
+               
+        elif gls > 5 and gls <=7:
+            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 2 ')
+            conn.commit()
+            conn.close()
+            return render_template('my_life_is_bb.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
+        elif gls > 7 and  gls <=9:
+            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 3 ')
+            conn.commit()
+            conn.close()
+            return render_template('i_was_born_with_style.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
+        else:
+            c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 4 ')
+            conn.commit()
+            conn.close()
+            return render_template('beachvibesbaby.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
     else:
         return render_template('index.html', title='Bandoo')
 
+print(app.config['SECRET KEY'])
 
 if __name__=="__main__":
     app.run(debug=True)

@@ -72,14 +72,14 @@ h2 {
 
 .logo {
 	object-fit: cover;
-  	width:67.06px;
-  	height:auto;
+  width:67.06px;
+  height:auto;
 }
 
 .slogan {
 	object-fit: cover;
-  	width: 138px;
-  	height: auto;
+  width: 138px;
+  height: auto;
 }
 
 /*MENU*/
@@ -195,7 +195,7 @@ select{
 	text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 3vw;
 }
 .recommendation-button{
   background-color: #FFFFFF;
@@ -214,12 +214,14 @@ select{
   grid-area: 6/1/7/3;
   display: block;
 }
-.recommendation-image{
+#recommendation-div{
   grid-area: 7/1/8/3;
-  display: block;
-  width: 100%;
-  height: inherit;
-  object-fit: cover;
+}
+.recommendation-image{
+  object-fit: fill;
+  max-width: 100%;
+  max-height: 100%;
+
 }
 
 /*NEW COLLECTION SECTION*/
@@ -560,7 +562,7 @@ select{
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 .recommendation-button{
   background-color: #FFFFFF;
@@ -580,11 +582,13 @@ select{
   /*background: lightgreen;*/
   display: block;
 }
-.recommendation-image{
+#recommendation-div{
   grid-area: 4/5/5/8;
-  display: block;
 }
-
+.recommendation-image{
+  max-width: 100%;
+  max-height: 100%;
+}
 /*NEW COLLECTION SECTION MEDIUM DEVICES*/
 #inner-grid-new-collection {
   display: grid;
@@ -869,9 +873,13 @@ select{
   grid-area: 2/5/5/9;
   display: block;
 }
+#recommendation-div{
+  grid-area: 2/9/5/13;
+}
 .recommendation-image{
-  grid-area: 2/9/6/13;
-  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  
 }
 /*NEW COLLECTION SECTION LARGE DEVICES*/
 #outer-grid > #inner-grid-new-collection {

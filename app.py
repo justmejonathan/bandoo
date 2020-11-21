@@ -1,14 +1,15 @@
+#importing the necessary tools for the backend to work
 from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 
+#setting where to find the database, a secret key for and where to find the static files
 app = Flask(__name__, static_url_path='/static')
 app.config['SECRET KEY'] = '654392748kl3242dfnkl43235hf'
-app.config['EMAIL_USER'] = 'grocholl.marvin@gmail.com'
-app.config['EMAIL:PASS'] = 'googleinnorway123'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
+#database model
 class Glassesdb(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30))
@@ -16,6 +17,7 @@ class Glassesdb(db.Model):
     image_file = db.Column(db.String(50))
     prize = db.Column(db.String(4))
 
+#definitions of the bestsellers in the frontend
 def first_bestseller():
     conn = sqlite3.connect('site.db')
     c = conn.cursor()
@@ -46,7 +48,7 @@ def third_bestseller():
     conn.close()
     return first_glasses
     
-
+#routes 
 @app.route('/')
 @app.route('/home')
 def index():
@@ -54,10 +56,12 @@ def index():
     bestseller2 = second_bestseller()
     bestseller3 = third_bestseller()
     return render_template('index.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html', title='Contact')
 
+#recommendation route
 @app.route('/recommendations', methods=["POST", "GET"])
 def recommendations():
     if request.method == "POST":
@@ -75,7 +79,6 @@ def recommendations():
             conn.commit()
             conn.close()
             return render_template('i_love_my_gold_chain.html', title='Bandoo', bestseller1=bestseller1, bestseller2=bestseller2, bestseller3=bestseller3)
-               
         elif gls > 5 and gls <=7:
             c.execute('UPDATE Glassesdb SET counter = counter +1 WHERE id = 2 ')
             conn.commit()
@@ -94,7 +97,6 @@ def recommendations():
     else:
         return render_template('index.html', title='Bandoo')
 
-print(app.config['SECRET KEY'])
 
 if __name__=="__main__":
     app.run(debug=True)

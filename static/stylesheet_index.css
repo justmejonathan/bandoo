@@ -1,10 +1,5 @@
 /* stylesheet_index.css*/
 /* resetting the browser to not get weird spacing: */
-/* things to do: 
-- check grid gaps
-- paddings
-- margins
-- scaling text*/
 * {
 	margin: 0;
 	padding: 0;
@@ -29,7 +24,6 @@ h2 {
   vertical-align: top;
 }
 .prize{
-	/*font-size: 14px;*/
 	color: #707070;
 }
 /* Small Devices */
@@ -53,7 +47,7 @@ h2 {
   padding: 8px;
 }
 
-/*HEADER SECTION*/
+/*HEADER SECTION Small Devices*/
 #inner-grid-header {
   display: grid;
   grid-template-columns: 50% 1fr;
@@ -82,7 +76,7 @@ h2 {
   	height: auto;
 }
 
-/*MENU*/
+/*MENU Small Devices*/
 nav {
 	/*background-color: lightgreen;*/
 	text-align: right;
@@ -103,7 +97,7 @@ ul li a {
 	padding: 0 10px;
 }
 
-/*BESTSELLERS SECTION*/
+/*BESTSELLERS SECTION Small Devices*/
 #inner-grid-bestsellers {
   display: grid;
   grid-template-columns: 50% 1fr;
@@ -149,7 +143,7 @@ ul li a {
   grid-area: 4/2/5/3;
   margin-top: 45%;
 }
-/*RECOMMNDATION SECTION*/
+/*RECOMMNDATION SECTION Small Devices*/
 #inner-grid-recommendation {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -219,7 +213,7 @@ select{
   display: none;
 }
 
-/*NEW COLLECTION SECTION*/
+/*NEW COLLECTION SECTION Small Devices*/
 #inner-grid-new-collection {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -272,7 +266,7 @@ select{
 	color: #302C2C;
 	margin-bottom: 20px;
 }
-/*INSTAGRAM SECTION*/
+/*INSTAGRAM SECTION Small Devices*/
 #inner-grid-instagram {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -329,7 +323,7 @@ select{
   font-size: 4vw;
 }
 
-/*FOOTER*/
+/*FOOTER Small Devices*/
 #inner-grid-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -434,7 +428,7 @@ p {
   	height:auto;
 }
 
-/*MENU MEDIUM DEVICES*/
+/*MENU Medium Devices*/
 nav {
 	/*background-color: lightgreen;*/
 	text-align: right;
@@ -452,7 +446,7 @@ ul li a{
 	font-family: 'Roboto Condensed', sans-serif;
 	padding: 0 10px;
 }
-/*BESTSELLERS SECTION MEDIUM DEVICES*/
+/*BESTSELLERS SECTION Medium Devices*/
 #inner-grid-bestsellers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -510,7 +504,7 @@ ul li a{
   grid-area: 3/7/4/9;
   margin-top: 0%;
 }
-/*RECOMMNDATION SECTION*/
+/*RECOMMNDATION SECTION Medium Devices*/
 #outer-grid > #inner-grid-recommendation {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -582,7 +576,7 @@ select{
   display: none;
 }
 
-/*NEW COLLECTION SECTION MEDIUM DEVICES*/
+/*NEW COLLECTION SECTION Medium Devices*/
 #inner-grid-new-collection {
   display: grid;
   grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% auto auto auto;
@@ -627,7 +621,7 @@ select{
 	color: #302C2C;
 	margin-bottom: 20px;
 }
-/*INSTAGRAM SECTION MEDIUM DEVICES*/
+/*INSTAGRAM SECTION Medium Devices*/
 #inner-grid-instagram {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -680,7 +674,7 @@ select{
   margin-top: 0%;
   font-size: 2vw;
 }
-/*FOOTER MEDIUM DEVICES*/
+/*FOOTER Medium Devices*/
 #inner-grid-footer {
   display: grid;
   grid-template-columns: auto auto auto 12.5% 12.5% auto auto auto;
@@ -814,7 +808,7 @@ select{
 .bestseller3-description{
   grid-area: 3/9/4/13;
 }
-/*RECOMMNDATION SECTION*/
+/*RECOMMNDATION SECTION Large Devices*/
 #outer-grid > #inner-grid-recommendation {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
